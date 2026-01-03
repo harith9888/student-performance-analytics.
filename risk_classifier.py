@@ -3,9 +3,13 @@ def classify_student(marks_list):
     fail_count = 0
 
     for mark in marks_list:
-        if mark < 50:
-            fail_count += 1
-        total += mark
+    if mark < 0 or mark > 100:
+        continue  # ignore invalid marks
+
+    if mark < 50:
+        fail_count += 1
+    total += mark
+
 
     average = total / len(marks_list)
 
