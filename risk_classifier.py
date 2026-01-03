@@ -9,10 +9,13 @@ def classify_student(marks_list):
 
     average = total / len(marks_list)
 
-    if (average < 60) or (fail_count >= 2):
-        status = "At-Risk"
-    else:
-        status = "Normal"
+   if (average < 60) or (fail_count >= 2):
+    status = "At-Risk"
+elif 60 <= average < 65 and fail_count == 1:
+    status = "Borderline"
+else:
+    status = "Normal"
+
 
     return status
 
